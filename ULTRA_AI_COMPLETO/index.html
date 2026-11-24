@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ULTRA AI</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand"><span class="logo">✦</span><div><b>ULTRA AI</b><small>Assistente local</small></div></div>
+    <button class="nav active" data-tab="chat">💬 Conversar com IA</button>
+    <button class="nav" data-tab="builder">🛠️ Criar aplicativo</button>
+    <div class="side-note"><b>Modo gratuito</b><p>A IA roda no seu computador com Ollama. Não usa créditos de API.</p></div>
+    <small class="version">ULTRA AI • versão inicial</small>
+  </aside>
+  <main>
+    <header><div><span class="dot"></span> IA local <span class="muted">• Ollama</span></div><span class="muted">Seus pedidos ficam no seu PC</span></header>
+    <section id="chat" class="panel visible">
+      <div class="intro"><div class="orb">✦</div><h1>Olá! Eu sou o ULTRA AI.</h1><p>Converse comigo ou peça ajuda para desenvolver suas ideias.</p></div>
+      <div id="messages" class="messages"><div class="bubble bot">Olá! Sou seu assistente de IA. O que vamos criar hoje?</div></div>
+      <form id="chatForm" class="composer"><textarea id="message" placeholder="Digite sua mensagem..." rows="2"></textarea><button>Enviar ➤</button></form>
+      <p class="hint">Dica: seja específico para receber respostas melhores.</p>
+    </section>
+    <section id="builder" class="panel">
+      <div class="builder-head"><span class="eyebrow">CONSTRUTOR DE SOFTWARE</span><h1>O que você quer criar?</h1><p>Descreva seu aplicativo. A IA vai gerar os arquivos HTML, CSS e JavaScript.</p></div>
+      <textarea id="description" class="description" placeholder="Ex.: Crie um aplicativo de lista de tarefas com botão para adicionar, concluir e excluir tarefas. Salve os dados no navegador."></textarea>
+      <button id="createBtn" class="primary">✦ Gerar aplicativo</button>
+      <div id="buildStatus" class="status"></div>
+      <div id="result" class="result"></div>
+      <p class="hint">A geração pode demorar alguns minutos em computadores com 8 GB de RAM. Revise o código antes de usar em produção.</p>
+    </section>
+  </main>
+</div>
+<script src="app.js"></script>
+</body></html>
