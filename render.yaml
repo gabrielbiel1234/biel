@@ -1,0 +1,16 @@
+
+services:
+  - type: web
+    name: ultra-ai-cloud
+    runtime: python
+    plan: free
+    buildCommand: pip install -r ULTRA_AI_CLOUD/requirements.txt
+    startCommand: python ULTRA_AI_CLOUD/server.py
+    healthCheckPath: /
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-2.5-flash
+      - key: PYTHON_VERSION
+        value: 3.12.8
